@@ -5,3 +5,5 @@ import changeCategoryReducer from "./changeCategoryReducer"
 const rootReducer = changeCategoryReducer({
     changeCategoryReducer: changeCategoryReducer
 })
+
+export default rootReducer;

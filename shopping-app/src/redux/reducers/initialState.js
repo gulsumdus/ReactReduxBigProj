@@ -1,5 +1,7 @@
 //başlangış statelerini tutacak (reducerların içindeki)
 
 export default {
-    currentCategory:{}
+    currentCategory:{
+        categoryName:"Beverages"
+    }
 }
