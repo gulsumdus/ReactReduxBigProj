@@ -2,6 +2,7 @@
 
 export default {
     currentCategory:{
-        categoryName:"Beverages"
+        categoryName:"Beverages",
+        categories:[] //apiden gelen json formatlı datayı, array'a atacağız
     }
 }

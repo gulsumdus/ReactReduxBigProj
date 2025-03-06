@@ -5,6 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';//import
 import store from "./redux/reducers/configureStore"//importing the store
 import { Provider } from "react-redux"//import
+import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Choose a theme
+import 'primereact/resources/primereact.min.css';  // Core PrimeReact styles
+import 'primeicons/primeicons.css';  // PrimeIcons styles
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

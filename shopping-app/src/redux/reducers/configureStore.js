@@ -1,11 +1,12 @@
 // redux/reducers/configureStore.js
-import { configureStore } from '@reduxjs/toolkit';//videoya göre değil  video versiyon hatalı
-import rootReducer from "./index" // Your reducer file
+import { configureStore, applyMiddleware } from "@reduxjs/toolkit";
+import rootReducer from "./index"; // `index.js` içindeki rootReducer
+import { thunk } from "redux-thunk"; //api için paket
+
 
 const store = configureStore({
-  reducer: {
-    rootReducer: rootReducer,  // Ensure you're correctly assigning reducers
-  },
+    reducer: rootReducer, // `rootReducer` doğrudan eklenmeli
+  
 });
 
 export default store;
