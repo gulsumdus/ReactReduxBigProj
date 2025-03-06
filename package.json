@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "alertify.js": "^1.0.12",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.2"
   }

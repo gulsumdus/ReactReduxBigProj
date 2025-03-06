@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux"
 import * as categoryActions from "../../redux/actions/categoryActions"
 import { ListGroupItem, ListGroup } from "reactstrap"
 import { Badge } from "reactstrap"
+import * as productActions from "../../redux/actions/productActions"
 
 
 class CategoryList extends Component {
@@ -13,14 +14,15 @@ class CategoryList extends Component {
     this.props.actions.getCategories() //categorileri getirdik, aşağıdaki mapDispatchToProps(dispatch)v fonksiyonu sayesinde
   }
   selectCategory = category => {
-    this.props.actions.changeCategory(category)
+    this.props.actions.changeCategory(category);
+    this.props.actions.getProducts(category.id);
   }
 
   render() {
     return (
       <div>
-        <Badge color="warning">Categories </Badge> 
-        <ListGroup> 
+        <Badge color="warning">Categories </Badge>
+        <ListGroup>
           {this.props.categories.map(cat => (
             <ListGroupItem active={cat.id === this.props.currentCategory.id} onClick={() => this.selectCategory(cat)} key={cat.id}>
               {cat.categoryName}
@@ -44,7 +46,8 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: {
       getCategories: bindActionCreators(categoryActions.getCategories, dispatch),//fonksiyonu çağırdık
-      changeCategory: bindActionCreators(categoryActions.changeCategory, dispatch)
+      changeCategory: bindActionCreators(categoryActions.changeCategory, dispatch),
+      getProducts: bindActionCreators(productActions.getProducts, dispatch),//fonksiyonu çağırdık
     }
   }
 }

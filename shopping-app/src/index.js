@@ -8,6 +8,8 @@ import { Provider } from "react-redux"//import
 import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Choose a theme
 import 'primereact/resources/primereact.min.css';  // Core PrimeReact styles
 import 'primeicons/primeicons.css';  // PrimeIcons styles
+import 'alertifyjs/build/css/alertify.min.css';
+
 
 
 

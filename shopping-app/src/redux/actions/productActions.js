@@ -13,13 +13,27 @@ export function getProductsSuccess(products) { //componentte kullanmak üzere bu
 
 }
 
-export function getProducts() {  //api'den verileri buradan çekiyoruz
+export function getProducts(categoryId) {  //api'den verileri buradan çekiyoruz
     return function (dispatch) {
-        //debugger;
         let url = "http://localhost:3000/products";
+        if(categoryId){
+            url=url+"?categoryId="+categoryId
+        }
         return fetch(url)
             .then(response => response.json())//db dosya'sı json formatında olabilir fakat string şekilnde geldiği için yine .json formuna dönüştürdük
             .then(result => dispatch(getProductsSuccess(result)));
     };
     //NOTE: dizi çektiğimiz için .json() parantezini unutma!!
 }
+
+
+// export function getProducts() {  //api'den verileri buradan çekiyoruz
+//     return function (dispatch) {
+//         //debugger;
+//         let url = "http://localhost:3000/products";
+//         return fetch(url)
+//             .then(response => response.json())//db dosya'sı json formatında olabilir fakat string şekilnde geldiği için yine .json formuna dönüştürdük
+//             .then(result => dispatch(getProductsSuccess(result)));
+//     };
+//     //NOTE: dizi çektiğimiz için .json() parantezini unutma!!
+// }
