@@ -7,7 +7,6 @@ import { ListGroupItem, ListGroup } from "reactstrap"
 import { Badge } from "reactstrap"
 
 
-
 class CategoryList extends Component {
 
   componentDidMount() {
@@ -20,7 +19,7 @@ class CategoryList extends Component {
   render() {
     return (
       <div>
-        <Badge color="warning">Categories </Badge>
+        <Badge color="warning">Categories </Badge> 
         <ListGroup> 
           {this.props.categories.map(cat => (
             <ListGroupItem active={cat.id === this.props.currentCategory.id} onClick={() => this.selectCategory(cat)} key={cat.id}>
