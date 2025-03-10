@@ -16,7 +16,7 @@ class ProductList extends Component {
   addToCart = (product) => {
     this.props.actions.addToCart({ quantity: 1, product })
    alertify.success(product.productName + "sepete eklendi")
-   console.log(product.productName + "sepete eklendi");
+   console.log(product.productName + "sepete eklendi", product.quantity);
   }
 
   render() {
@@ -30,7 +30,7 @@ class ProductList extends Component {
             <tr>
               <th>#</th>
               <th>Product Name</th>
-              <th>Last Name</th>
+              <th>Unit Price</th>
               <th>Quantity Per Unit</th>
               <th>Units in Stock</th>
               <th>   </th>

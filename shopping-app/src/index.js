@@ -10,15 +10,20 @@ import 'primereact/resources/primereact.min.css';  // Core PrimeReact styles
 import 'primeicons/primeicons.css';  // PrimeIcons styles
 import 'alertifyjs/build/css/alertify.min.css';
 
+//Router Yapısı:
+import { BrowserRouter } from "react-router-dom"//****************************************** */
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store= {store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 

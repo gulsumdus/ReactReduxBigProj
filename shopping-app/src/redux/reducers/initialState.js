@@ -5,6 +5,8 @@ export default {
         categoryName:"Beverages",
         categories:[], //apiden gelen json formatlı datayı, array'a atacağız
         products:[],
-        cart:[]
+        cart:[],
+        savedProduct:{}
+        
     }
 }
